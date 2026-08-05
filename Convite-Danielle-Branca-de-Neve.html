@@ -158,12 +158,12 @@
   }
   .hero-rsvp .rsvp-actions{gap:10px;}
   .rsvp-btn.small{padding:10px 20px;font-size:.82rem;}
-  .hero-critter{position:absolute;z-index:1;animation:floaty 4.5s ease-in-out infinite;filter:drop-shadow(0 8px 12px rgba(0,0,0,.12));}
-  .deco-critter{position:absolute;z-index:1;border-radius:18px;animation:floaty 4.5s ease-in-out infinite;filter:drop-shadow(0 8px 12px rgba(0,0,0,.1));}
+  .hero-critter{position:absolute;z-index:1;animation:floaty 4.5s ease-in-out infinite;filter:drop-shadow(0 8px 10px rgba(0,0,0,.18));}
+  .deco-critter{position:absolute;z-index:1;animation:floaty 4.5s ease-in-out infinite;filter:drop-shadow(0 8px 10px rgba(0,0,0,.15));}
   @media (max-width:680px){.deco-critter{display:none;}}
-  .storybook-img{width:190px;margin:0 auto 26px;border-radius:32px;box-shadow:0 14px 30px rgba(120,160,120,.25);animation:floaty 5s ease-in-out infinite;}
-  .icon-row img{width:58px;height:58px;border-radius:50%;object-fit:cover;border:3px solid #fff;box-shadow:0 6px 14px rgba(0,0,0,.15);background:#fff;}
-  .footer-mascot{width:130px;margin:0 auto 14px;border-radius:26px;box-shadow:0 12px 26px rgba(0,0,0,.25);animation:floaty 5s ease-in-out infinite;}
+  .storybook-img{width:190px;margin:0 auto 10px;object-fit:contain;animation:floaty 5s ease-in-out infinite;filter:drop-shadow(0 14px 16px rgba(90,70,50,.25));}
+  .icon-row img{width:60px;height:60px;object-fit:contain;filter:drop-shadow(0 5px 8px rgba(0,0,0,.2));}
+  .footer-mascot{width:150px;margin:0 auto 6px;object-fit:contain;animation:floaty 5s ease-in-out infinite;filter:drop-shadow(0 12px 14px rgba(0,0,0,.35));}
   .frame .ribbon{
     position:absolute;top:-22px;left:50%;transform:translateX(-50%);
     background:var(--blush-darker);color:#fff;
@@ -398,7 +398,7 @@
 <section id="ch1">
   <div class="wrap reveal">
     <span class="chapter-num">Capítulo I</span>
-    <img class="storybook-img" src="img-princesa.jpeg" alt="Baby Branca de Neve">
+    <img class="storybook-img" src="img-princesa.png" alt="Baby Branca de Neve">
     <h2>Era uma vez...</h2>
     <p class="story-text">
       ...uma princesinha chamada Danielle, com lábios vermelhos como a maçã, sorriso doce como o conto
@@ -408,7 +408,7 @@
     </p>
     <div class="icon-row">
       <span>🍎</span>
-      <img src="img-anao.jpeg" alt="anãozinho">
+      <img src="img-anao.png" alt="anãozinho">
       <img src="img-corca.png" alt="corça">
       <img src="img-passaro.png" alt="passarinho">
       <img src="img-coelho.png" alt="coelhinho">
@@ -420,7 +420,7 @@
 <!-- ================= CHAPTER II — DETAILS ================= -->
 <section id="ch2">
   <img class="deco-critter" src="img-corca.png" alt="" style="width:80px;top:6%;right:5%;animation-delay:.2s;">
-  <img class="deco-critter" src="img-anao.jpeg" alt="" style="width:72px;bottom:8%;left:4%;animation-delay:.8s;">
+  <img class="deco-critter" src="img-anao.png" alt="" style="width:72px;bottom:8%;left:4%;animation-delay:.8s;">
   <div class="wrap reveal">
     <span class="chapter-num">Capítulo II</span>
     <h2>Quando & Onde</h2>
@@ -474,7 +474,7 @@
 
 <!-- ================= CHAPTER IV — RSVP ================= -->
 <section id="ch4">
-  <img class="deco-critter" src="img-anao2.jpeg" alt="" style="width:76px;top:7%;right:5%;animation-delay:.3s;">
+  <img class="deco-critter" src="img-anao2.png" alt="" style="width:76px;top:7%;right:5%;animation-delay:.3s;">
   <img class="deco-critter" src="img-corca.png" alt="" style="width:74px;bottom:7%;left:5%;animation-delay:.9s;">
   <div class="wrap reveal">
     <span class="chapter-num">Capítulo IV</span>
@@ -495,7 +495,7 @@
   <img class="deco-critter" src="img-passaro.png" alt="" style="width:66px;bottom:8%;right:5%;animation-delay:1.3s;">
   <div class="wrap reveal">
     <span class="chapter-num">Capítulo V</span>
-    <img class="storybook-img" style="width:130px;" src="img-anao2.jpeg" alt="anãozinho">
+    <img class="storybook-img" style="width:130px;" src="img-anao2.png" alt="anãozinho">
     <h2>Um toque de conto de fadas</h2>
     <div class="palette-row">
       <span class="swatch" style="background:var(--blush-deep)"></span>
@@ -514,7 +514,7 @@
 
 <!-- ================= FOOTER ================= -->
 <footer>
-  <img class="footer-mascot" src="img-princesa.jpeg" alt="Baby Branca de Neve">
+  <img class="footer-mascot" src="img-princesa.png" alt="Baby Branca de Neve">
   <span class="script">Danielle</span>
   <p>"E foram felizes para sempre" — e essa história de amor começa com você ao nosso lado neste dia tão especial.</p>
   <p class="hosts">Com carinho, Isabelle &amp; Arlan</p>
