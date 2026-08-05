@@ -138,7 +138,30 @@
     max-width:520px;
     box-shadow:0 18px 40px rgba(180,150,200,.25);
   }
-  .princess{width:150px;margin:0 auto 6px;animation:floaty 5s ease-in-out infinite;}
+  .princess{width:110px;margin:0 auto 10px;animation:floaty 5s ease-in-out infinite;}
+  .photo-wrap{position:relative;width:170px;margin:0 auto 8px;z-index:2;animation:floaty 5s ease-in-out infinite;}
+  .photo-frame{
+    width:170px;height:170px;border-radius:50%;overflow:hidden;
+    border:8px solid #fff;
+    box-shadow:0 14px 30px rgba(180,150,200,.4), 0 0 0 4px var(--blush);
+  }
+  .photo-frame img{width:100%;height:100%;object-fit:cover;display:block;}
+  .photo-bow{
+    position:absolute;top:-16px;right:-8px;font-size:2.2rem;
+    transform:rotate(15deg);animation:wiggle 3s ease-in-out infinite;
+    filter:drop-shadow(0 4px 6px rgba(0,0,0,.2));
+  }
+  .hero-rsvp{margin-top:26px;}
+  .hero-rsvp-label{
+    font-family:'Baloo 2',sans-serif;font-weight:700;font-size:.85rem;
+    color:var(--ink-soft);margin-bottom:12px;
+  }
+  .hero-rsvp .rsvp-actions{gap:10px;}
+  .rsvp-btn.small{padding:10px 20px;font-size:.82rem;}
+  .hero-critter{position:absolute;z-index:1;animation:floaty 4.5s ease-in-out infinite;filter:drop-shadow(0 8px 12px rgba(0,0,0,.12));}
+  .storybook-img{width:190px;margin:0 auto 26px;border-radius:32px;box-shadow:0 14px 30px rgba(120,160,120,.25);animation:floaty 5s ease-in-out infinite;}
+  .icon-row img{width:58px;height:58px;border-radius:50%;object-fit:cover;border:3px solid #fff;box-shadow:0 6px 14px rgba(0,0,0,.15);background:#fff;}
+  .footer-mascot{width:130px;margin:0 auto 14px;border-radius:26px;box-shadow:0 12px 26px rgba(0,0,0,.25);animation:floaty 5s ease-in-out infinite;}
   .frame .ribbon{
     position:absolute;top:-22px;left:50%;transform:translateX(-50%);
     background:var(--blush-darker);color:#fff;
@@ -210,11 +233,11 @@
   .icon-row{
     display:flex;justify-content:center;gap:24px;margin-top:34px;font-size:2rem;
   }
-  .icon-row span{display:inline-block;animation:floaty 3s ease-in-out infinite;}
-  .icon-row span:nth-child(2){animation-delay:.3s;}
-  .icon-row span:nth-child(3){animation-delay:.6s;}
-  .icon-row span:nth-child(4){animation-delay:.9s;}
-  .icon-row span:nth-child(5){animation-delay:1.2s;}
+  .icon-row > *{display:inline-block;animation:floaty 3s ease-in-out infinite;}
+  .icon-row > *:nth-child(2){animation-delay:.3s;}
+  .icon-row > *:nth-child(3){animation-delay:.6s;}
+  .icon-row > *:nth-child(4){animation-delay:.9s;}
+  .icon-row > *:nth-child(5){animation-delay:1.2s;}
 
   /* ================= CHAPTER II — DETAILS ================= */
   #ch2{
@@ -340,28 +363,13 @@
     <div class="cloud" style="width:80px;height:28px;bottom:10%;right:10%;"></div>
   </div>
 
-  <svg class="princess" viewBox="0 0 220 240" xmlns="http://www.w3.org/2000/svg">
-    <ellipse cx="110" cy="228" rx="70" ry="10" fill="#cdb0ec" opacity=".35"/>
-    <path d="M58,168 Q110,148 162,168 L178,232 Q110,254 42,232 Z" fill="#7fb1e6"/>
-    <path d="M80,138 Q110,122 140,138 L150,176 Q110,192 70,176 Z" fill="#ffdd7a"/>
-    <circle cx="52" cy="150" r="23" fill="#a9cdf2"/>
-    <circle cx="168" cy="150" r="23" fill="#a9cdf2"/>
-    <rect x="96" y="118" width="28" height="24" rx="12" fill="#ffe0c2"/>
-    <path d="M55,92 Q50,150 72,162 L78,108 Q62,96 55,92Z" fill="#5b4335"/>
-    <path d="M165,92 Q170,150 148,162 L142,108 Q158,96 165,92Z" fill="#5b4335"/>
-    <circle cx="110" cy="90" r="56" fill="#ffe0c2"/>
-    <path d="M52,96 Q56,22 110,22 Q164,22 168,96 Q140,66 110,66 Q80,66 52,96Z" fill="#5b4335"/>
-    <g transform="translate(64,34) rotate(-18)">
-      <polygon points="0,0 22,-11 22,11" fill="#ef7690"/>
-      <polygon points="0,0 -22,-11 -22,11" fill="#ef7690"/>
-      <circle cx="0" cy="0" r="7" fill="#f79bab"/>
-    </g>
-    <circle cx="90" cy="96" r="5.5" fill="#4a372c"/>
-    <circle cx="130" cy="96" r="5.5" fill="#4a372c"/>
-    <circle cx="78" cy="114" r="10" fill="#f79bab" opacity=".55"/>
-    <circle cx="142" cy="114" r="10" fill="#f79bab" opacity=".55"/>
-    <path d="M94,114 Q110,126 126,114" stroke="#4a372c" stroke-width="3.5" fill="none" stroke-linecap="round"/>
-  </svg>
+  <img class="hero-critter" src="img-passaro.jpeg" alt="" style="width:64px;top:10%;left:8%;animation-delay:.4s;">
+  <img class="hero-critter" src="img-coelho.jpeg" alt="" style="width:78px;bottom:6%;left:6%;animation-delay:1s;">
+
+  <div class="photo-wrap">
+    <div class="photo-frame"><img src="danielle-foto.jpeg" alt="Danielle"></div>
+    <span class="photo-bow">🎀</span>
+  </div>
 
   <div class="frame">
     <div class="ribbon">1 aninho ✨</div>
@@ -371,6 +379,13 @@
     <p class="hero-sub">vai fazer 1 aninho!</p>
     <span class="badge">🍎 Baby Branca de Neve 🍎</span>
     <p class="hero-date">Domingo, 23 de agosto de 2026 · 13h</p>
+    <div class="hero-rsvp">
+      <p class="hero-rsvp-label">Confirme sua presença 👇</p>
+      <div class="rsvp-actions">
+        <a class="rsvp-btn primary small" href="https://wa.me/5511999999999?text=Ol%C3%A1!%20Confirmo%20presen%C3%A7a%20na%20festa%20da%20Danielle%20%F0%9F%91%91%F0%9F%8D%8E" target="_blank" rel="noopener">Eu vou! 👑</a>
+        <a class="rsvp-btn ghost small" href="https://wa.me/5511999999999?text=Ol%C3%A1!%20Infelizmente%20n%C3%A3o%20poderei%20ir%20%C3%A0%20festa%20da%20Danielle." target="_blank" rel="noopener">Não vou</a>
+      </div>
+    </div>
   </div>
 
   <div class="scroll-cue">role a página &darr;</div>
@@ -381,6 +396,7 @@
 <section id="ch1">
   <div class="wrap reveal">
     <span class="chapter-num">Capítulo I</span>
+    <img class="storybook-img" src="img-princesa.jpeg" alt="Baby Branca de Neve">
     <h2>Era uma vez...</h2>
     <p class="story-text">
       ...uma princesinha chamada Danielle, com lábios vermelhos como a maçã, sorriso doce como o conto
@@ -389,7 +405,11 @@
       arrumando a floresta, o castelo está enfeitado e falta apenas você para essa história ficar completa.
     </p>
     <div class="icon-row">
-      <span>🍎</span><span>🌳</span><span>🦋</span><span>🎀</span><span>🐰</span>
+      <span>🍎</span>
+      <img src="img-anao.jpeg" alt="anãozinho">
+      <img src="img-corca.jpeg" alt="corça">
+      <img src="img-passaro.jpeg" alt="passarinho">
+      <img src="img-coelho.jpeg" alt="coelhinho">
     </div>
   </div>
   <svg class="divider" viewBox="0 0 1440 100" preserveAspectRatio="none"><path d="M0,50 C240,10 480,95 720,55 C960,15 1200,80 1440,40 L1440,100 L0,100 Z" fill="#dceeff"/></svg>
@@ -465,6 +485,7 @@
 <section id="ch5">
   <div class="wrap reveal">
     <span class="chapter-num">Capítulo V</span>
+    <img class="storybook-img" style="width:130px;" src="img-anao2.jpeg" alt="anãozinho">
     <h2>Um toque de conto de fadas</h2>
     <div class="palette-row">
       <span class="swatch" style="background:var(--blush-deep)"></span>
@@ -483,6 +504,7 @@
 
 <!-- ================= FOOTER ================= -->
 <footer>
+  <img class="footer-mascot" src="img-princesa.jpeg" alt="Baby Branca de Neve">
   <span class="script">Danielle</span>
   <p>"E foram felizes para sempre" — e essa história de amor começa com você ao nosso lado neste dia tão especial.</p>
   <p class="hosts">Com carinho, Isabelle &amp; Arlan</p>
