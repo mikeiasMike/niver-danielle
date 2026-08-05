@@ -1,0 +1,542 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Danielle vai fazer 1 aninho! 👑 Baby Branca de Neve</title>
+<meta name="description" content="Convite de aniversário de 1 aninho da Danielle — tema Baby Branca de Neve">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Alex+Brush&family=Baloo+2:wght@500;600;700;800&family=Quicksand:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --mint:#eaf6ee;
+    --mint-deep:#bfe3cb;
+    --sage:#7fbb95;
+    --sage-deep:#4f9a6c;
+    --blush:#ffd7de;
+    --blush-deep:#f79bab;
+    --blush-darker:#ef7690;
+    --sky:#dceeff;
+    --sky-deep:#a9cdf2;
+    --sky-darker:#7fb1e6;
+    --butter:#fff1c2;
+    --butter-deep:#ffdd7a;
+    --lilac:#efe3fb;
+    --lilac-deep:#cdb0ec;
+    --cream:#fffaf1;
+    --ink:#5b4a3f;
+    --ink-soft:#7a6656;
+    --gold:#e3ac52;
+  }
+  *{box-sizing:border-box;margin:0;padding:0;}
+  html{scroll-behavior:smooth;}
+  body{
+    font-family:'Quicksand',sans-serif;
+    color:var(--ink);
+    background:var(--cream);
+    overflow-x:hidden;
+    position:relative;
+  }
+  h1,h2,h3{font-family:'Baloo 2',sans-serif;}
+  .script{font-family:'Alex Brush',cursive;}
+  a{text-decoration:none;color:inherit;}
+  img,svg{display:block;max-width:100%;}
+
+  /* ---------- Falling petals / apple leaves layer ---------- */
+  #petals{
+    position:fixed;inset:0;pointer-events:none;z-index:30;overflow:hidden;
+  }
+  .petal{
+    position:absolute; top:-5vh; opacity:.85;
+    animation:fall linear infinite;
+    will-change:transform;
+  }
+  @keyframes fall{
+    0%{transform:translateY(-8vh) translateX(0) rotate(0deg);}
+    100%{transform:translateY(108vh) translateX(var(--drift,20px)) rotate(360deg);}
+  }
+  @keyframes wiggle{
+    0%,100%{transform:rotate(-6deg);}
+    50%{transform:rotate(6deg);}
+  }
+  @keyframes floaty{
+    0%,100%{transform:translateY(0);}
+    50%{transform:translateY(-10px);}
+  }
+  .divider{position:absolute;bottom:-1px;left:0;width:100%;height:64px;z-index:3;pointer-events:none;}
+
+  /* ---------- Section base ---------- */
+  section{
+    position:relative;
+    padding:90px 20px 110px;
+    overflow:hidden;
+  }
+  .wrap{
+    max-width:720px;margin:0 auto;position:relative;z-index:2;
+  }
+  .eyebrow{
+    font-family:'Baloo 2',sans-serif;
+    font-weight:600;
+    letter-spacing:.15em;
+    text-transform:uppercase;
+    font-size:.75rem;
+    text-align:center;
+  }
+  .chapter-num{
+    display:inline-block;text-align:center;
+    font-family:'Baloo 2',sans-serif;
+    font-weight:700;font-size:.85rem;
+    letter-spacing:.12em;text-transform:uppercase;
+    margin:0 auto 12px;
+    padding:6px 18px;
+    border-radius:30px;
+  }
+
+  /* ---------- reveal-on-scroll ---------- */
+  .reveal{opacity:0;transform:translateY(28px);transition:opacity .9s ease, transform .9s ease;}
+  .reveal.in{opacity:1;transform:translateY(0);}
+
+  /* wave divider between sections */
+  .wave-div{display:block;width:100%;height:60px;margin-top:-2px;}
+
+  /* ================= HERO ================= */
+  #hero{
+    min-height:100vh;
+    display:flex;flex-direction:column;align-items:center;justify-content:center;
+    text-align:center;
+    padding:70px 20px 60px;
+    background:linear-gradient(180deg, var(--lilac) 0%, var(--sky) 45%, var(--mint) 100%);
+    color:var(--ink);
+  }
+  #hero::before{ /* soft sparkles */
+    content:"";position:absolute;inset:0;
+    background-image:
+      radial-gradient(3px 3px at 12% 20%, var(--butter-deep), transparent),
+      radial-gradient(3px 3px at 82% 18%, var(--blush-deep), transparent),
+      radial-gradient(2.5px 2.5px at 40% 12%, var(--sky-darker), transparent),
+      radial-gradient(3px 3px at 68% 30%, var(--gold), transparent),
+      radial-gradient(2.5px 2.5px at 90% 48%, var(--blush-deep), transparent),
+      radial-gradient(3px 3px at 22% 55%, var(--sage), transparent),
+      radial-gradient(2.5px 2.5px at 55% 8%, var(--gold), transparent);
+    opacity:.7;
+    animation:twinkle 4s ease-in-out infinite alternate;
+  }
+  @keyframes twinkle{from{opacity:.4;}to{opacity:.85;}}
+
+  .clouds{position:absolute;inset:0;pointer-events:none;z-index:1;}
+  .cloud{position:absolute;background:#fff;border-radius:50px;opacity:.75;filter:blur(.5px);}
+  .cloud::before,.cloud::after{content:"";position:absolute;background:#fff;border-radius:50%;}
+
+  .frame{
+    background:#fff;
+    border:4px solid var(--blush);
+    border-radius:50px;
+    padding:44px 34px;
+    position:relative;
+    z-index:2;
+    max-width:520px;
+    box-shadow:0 18px 40px rgba(180,150,200,.25);
+  }
+  .princess{width:150px;margin:0 auto 6px;animation:floaty 5s ease-in-out infinite;}
+  .frame .ribbon{
+    position:absolute;top:-22px;left:50%;transform:translateX(-50%);
+    background:var(--blush-darker);color:#fff;
+    padding:7px 22px;border-radius:20px;
+    font-family:'Baloo 2',sans-serif;font-weight:700;font-size:.78rem;
+    letter-spacing:.08em;text-transform:uppercase;
+    box-shadow:0 6px 14px rgba(239,118,144,.35);
+  }
+
+  .crown-icon{font-size:2.3rem;margin-bottom:8px;display:inline-block;animation:wiggle 3s ease-in-out infinite;transform-origin:50% 80%;}
+  .kicker{
+    letter-spacing:.15em;text-transform:uppercase;font-size:.78rem;
+    color:var(--sage-deep);margin-bottom:10px;font-weight:700;
+    font-family:'Baloo 2',sans-serif;
+  }
+  .name-title{
+    font-size:clamp(3.4rem,12vw,5.6rem);
+    line-height:.95;
+    color:var(--blush-darker);
+    margin:2px 0 8px;
+  }
+  .hero-sub{
+    font-size:1.2rem;color:var(--ink);
+    font-weight:700;margin-bottom:16px;
+    font-family:'Baloo 2',sans-serif;
+  }
+  .badge{
+    display:inline-flex;align-items:center;gap:8px;
+    background:var(--butter);
+    color:#8a6a1f;
+    padding:9px 22px;border-radius:40px;
+    font-size:.8rem;letter-spacing:.06em;text-transform:uppercase;
+    font-weight:700;font-family:'Baloo 2',sans-serif;
+    margin-top:4px;
+  }
+  .hero-date{
+    margin-top:22px;font-family:'Baloo 2',sans-serif;font-weight:600;
+    font-size:1.1rem;color:var(--sky-darker);
+  }
+  .scroll-cue{
+    margin-top:40px;font-size:.75rem;letter-spacing:.15em;text-transform:uppercase;
+    color:var(--ink-soft);opacity:.75;font-weight:700;
+    animation:bob 2.2s ease-in-out infinite;
+  }
+  @keyframes bob{0%,100%{transform:translateY(0);}50%{transform:translateY(8px);}}
+
+  .castle-silhouette{width:min(85%,340px);margin:0 auto 22px;opacity:.95;}
+
+  /* ================= CHAPTER I — STORY ================= */
+  #ch1{
+    background:var(--mint);
+    color:var(--ink);
+    text-align:center;
+  }
+  #ch1 .chapter-num{background:var(--mint-deep);color:var(--sage-deep);}
+  #ch1 h2{font-size:clamp(1.9rem,4.5vw,2.5rem);color:var(--sage-deep);margin:14px 0 24px;}
+  .story-text{
+    font-size:1.15rem;line-height:1.95;
+    font-weight:500;
+  }
+  .story-text::first-letter{
+    font-family:'Baloo 2',sans-serif;
+    font-size:3.2rem;
+    float:left;line-height:.8;
+    padding:6px 10px 0 0;
+    color:var(--blush-darker);
+    font-weight:800;
+  }
+  .icon-row{
+    display:flex;justify-content:center;gap:24px;margin-top:34px;font-size:2rem;
+  }
+  .icon-row span{display:inline-block;animation:floaty 3s ease-in-out infinite;}
+  .icon-row span:nth-child(2){animation-delay:.3s;}
+  .icon-row span:nth-child(3){animation-delay:.6s;}
+  .icon-row span:nth-child(4){animation-delay:.9s;}
+  .icon-row span:nth-child(5){animation-delay:1.2s;}
+
+  /* ================= CHAPTER II — DETAILS ================= */
+  #ch2{
+    background:linear-gradient(180deg, var(--sky), #eef7ff 100%);
+    color:var(--ink);
+    text-align:center;
+  }
+  #ch2 .chapter-num{background:#fff;color:var(--sky-darker);}
+  #ch2 h2{color:var(--sky-darker);font-size:clamp(1.9rem,4.5vw,2.5rem);margin:14px 0 8px;}
+  #ch2 .sub{color:var(--ink-soft);margin-bottom:40px;font-weight:600;font-family:'Baloo 2',sans-serif;font-size:.95rem;}
+  .cards{
+    display:grid;grid-template-columns:repeat(3,1fr);gap:20px;
+  }
+  @media (max-width:680px){.cards{grid-template-columns:1fr;}}
+  .card{
+    background:#fff;
+    border-radius:32px;
+    padding:30px 18px;
+    box-shadow:0 10px 26px rgba(120,160,210,.16);
+  }
+  .card .ic{font-size:2.1rem;margin-bottom:12px;}
+  .card h3{font-size:.75rem;letter-spacing:.1em;text-transform:uppercase;color:var(--sky-darker);margin-bottom:10px;font-family:'Baloo 2',sans-serif;font-weight:700;}
+  .card p{font-size:1.08rem;font-weight:700;line-height:1.5;}
+  .card small{display:block;margin-top:6px;font-weight:600;opacity:.7;font-size:.85rem;}
+  .map-btn{
+    display:inline-block;margin-top:14px;
+    font-size:.8rem;font-weight:700;
+    color:var(--sky-darker);border-bottom:2px solid var(--sky-deep);padding-bottom:2px;
+  }
+  .cal-btn{
+    display:inline-flex;align-items:center;gap:8px;
+    margin-top:40px;
+    background:var(--butter-deep);color:#6b4e12;
+    padding:14px 30px;border-radius:40px;
+    font-weight:700;letter-spacing:.02em;font-size:.92rem;
+    font-family:'Baloo 2',sans-serif;
+    box-shadow:0 10px 22px rgba(255,221,122,.45);
+    transition:transform .25s ease, box-shadow .25s ease;
+  }
+  .cal-btn:hover{transform:translateY(-3px);}
+
+  /* ================= CHAPTER III — COUNTDOWN ================= */
+  #ch3{
+    background:linear-gradient(180deg,var(--lilac),#f3ecfb 100%);
+    color:var(--ink);text-align:center;
+  }
+  #ch3 .chapter-num{background:#fff;color:var(--lilac-deep);}
+  #ch3 h2{color:#7a5aab;font-size:clamp(1.9rem,4.5vw,2.5rem);margin:14px 0 8px;}
+  #ch3 .sub{font-weight:600;font-family:'Baloo 2',sans-serif;color:var(--ink-soft);margin-bottom:36px;font-size:.95rem;}
+  .countdown{
+    display:flex;justify-content:center;gap:16px;flex-wrap:wrap;
+  }
+  .cd-box{
+    background:#fff;
+    border-radius:28px;
+    width:92px;padding:20px 6px;
+    box-shadow:0 10px 24px rgba(180,150,220,.2);
+  }
+  .cd-box .num{
+    font-family:'Baloo 2',sans-serif;font-weight:800;font-size:2rem;color:var(--blush-darker);
+  }
+  .cd-box .lbl{
+    margin-top:6px;font-size:.68rem;letter-spacing:.08em;text-transform:uppercase;color:var(--ink-soft);font-weight:700;
+  }
+  .apple-deco{font-size:2.2rem;margin-top:34px;}
+
+  /* ================= CHAPTER IV — RSVP ================= */
+  #ch4{
+    background:linear-gradient(180deg,var(--blush),#ffeef1 100%);
+    color:var(--ink);text-align:center;
+  }
+  #ch4 .chapter-num{background:#fff;color:var(--blush-darker);}
+  #ch4 h2{color:var(--blush-darker);font-size:clamp(1.9rem,4.5vw,2.5rem);margin:14px 0 14px;}
+  #ch4 .sub{max-width:500px;margin:0 auto 32px;font-size:1.02rem;line-height:1.7;font-weight:600;}
+  .rsvp-actions{display:flex;justify-content:center;gap:16px;flex-wrap:wrap;}
+  .rsvp-btn{
+    padding:15px 30px;border-radius:40px;font-weight:700;letter-spacing:.02em;
+    font-family:'Baloo 2',sans-serif;
+    transition:transform .25s ease, background .25s ease;
+    font-size:.95rem;
+  }
+  .rsvp-btn.primary{background:var(--blush-darker);color:#fff;box-shadow:0 10px 22px rgba(239,118,144,.4);}
+  .rsvp-btn.primary:hover{transform:translateY(-3px);}
+  .rsvp-btn.ghost{color:var(--blush-darker);background:#fff;border:2px solid var(--blush-deep);}
+  .rsvp-btn.ghost:hover{background:var(--blush);}
+  .rsvp-note{margin-top:24px;font-size:.85rem;opacity:.75;font-weight:600;}
+
+  /* ================= CHAPTER V — DRESS CODE / GIFT ================= */
+  #ch5{
+    background:linear-gradient(180deg,var(--butter),#fff8e3 100%);
+    color:var(--ink);text-align:center;
+  }
+  #ch5 .chapter-num{background:#fff;color:#a5811f;}
+  #ch5 h2{color:#8a6a1f;font-size:clamp(1.8rem,4vw,2.3rem);margin:14px 0 22px;}
+  .palette-row{display:flex;justify-content:center;gap:14px;margin:22px 0 28px;}
+  .swatch{width:34px;height:34px;border-radius:50%;border:3px solid #fff;box-shadow:0 4px 10px rgba(0,0,0,.12);}
+  #ch5 p.msg{max-width:520px;margin:0 auto;font-size:1.06rem;line-height:1.8;font-weight:600;}
+
+  /* ================= FOOTER ================= */
+  footer{
+    background:linear-gradient(180deg,var(--sage-deep),#3f8158);
+    color:#fff;
+    text-align:center;padding:80px 20px 60px;
+  }
+  footer .script{font-size:2.8rem;color:#fff;display:block;margin-bottom:6px;}
+  footer p{opacity:.92;font-size:.96rem;max-width:440px;margin:0 auto 6px;line-height:1.7;font-weight:500;}
+  footer .hosts{margin-top:22px;font-family:'Baloo 2',sans-serif;font-weight:700;color:var(--butter);font-size:1.05rem;}
+  footer .fin{margin-top:32px;font-size:1.7rem;}
+
+  ::selection{background:var(--blush-deep);color:#fff;}
+</style>
+</head>
+<body>
+
+<div id="petals"></div>
+
+<!-- ================= HERO ================= -->
+<section id="hero">
+  <div class="clouds">
+    <div class="cloud" style="width:90px;height:32px;top:8%;left:6%;"></div>
+    <div class="cloud" style="width:70px;height:26px;top:14%;right:8%;"></div>
+    <div class="cloud" style="width:60px;height:22px;top:26%;left:14%;"></div>
+    <div class="cloud" style="width:80px;height:28px;bottom:10%;right:10%;"></div>
+  </div>
+
+  <svg class="princess" viewBox="0 0 220 240" xmlns="http://www.w3.org/2000/svg">
+    <ellipse cx="110" cy="228" rx="70" ry="10" fill="#cdb0ec" opacity=".35"/>
+    <path d="M58,168 Q110,148 162,168 L178,232 Q110,254 42,232 Z" fill="#7fb1e6"/>
+    <path d="M80,138 Q110,122 140,138 L150,176 Q110,192 70,176 Z" fill="#ffdd7a"/>
+    <circle cx="52" cy="150" r="23" fill="#a9cdf2"/>
+    <circle cx="168" cy="150" r="23" fill="#a9cdf2"/>
+    <rect x="96" y="118" width="28" height="24" rx="12" fill="#ffe0c2"/>
+    <path d="M55,92 Q50,150 72,162 L78,108 Q62,96 55,92Z" fill="#5b4335"/>
+    <path d="M165,92 Q170,150 148,162 L142,108 Q158,96 165,92Z" fill="#5b4335"/>
+    <circle cx="110" cy="90" r="56" fill="#ffe0c2"/>
+    <path d="M52,96 Q56,22 110,22 Q164,22 168,96 Q140,66 110,66 Q80,66 52,96Z" fill="#5b4335"/>
+    <g transform="translate(64,34) rotate(-18)">
+      <polygon points="0,0 22,-11 22,11" fill="#ef7690"/>
+      <polygon points="0,0 -22,-11 -22,11" fill="#ef7690"/>
+      <circle cx="0" cy="0" r="7" fill="#f79bab"/>
+    </g>
+    <circle cx="90" cy="96" r="5.5" fill="#4a372c"/>
+    <circle cx="130" cy="96" r="5.5" fill="#4a372c"/>
+    <circle cx="78" cy="114" r="10" fill="#f79bab" opacity=".55"/>
+    <circle cx="142" cy="114" r="10" fill="#f79bab" opacity=".55"/>
+    <path d="M94,114 Q110,126 126,114" stroke="#4a372c" stroke-width="3.5" fill="none" stroke-linecap="round"/>
+  </svg>
+
+  <div class="frame">
+    <div class="ribbon">1 aninho ✨</div>
+    <div class="crown-icon">👑</div>
+    <div class="kicker">o reino se prepara para celebrar</div>
+    <h1 class="name-title script">Danielle</h1>
+    <p class="hero-sub">vai fazer 1 aninho!</p>
+    <span class="badge">🍎 Baby Branca de Neve 🍎</span>
+    <p class="hero-date">Domingo, 23 de agosto de 2026 · 13h</p>
+  </div>
+
+  <div class="scroll-cue">role a página &darr;</div>
+  <svg class="divider" viewBox="0 0 1440 100" preserveAspectRatio="none"><path d="M0,40 C240,90 480,0 720,25 C960,50 1200,95 1440,45 L1440,100 L0,100 Z" fill="#eaf6ee"/></svg>
+</section>
+
+<!-- ================= CHAPTER I ================= -->
+<section id="ch1">
+  <div class="wrap reveal">
+    <span class="chapter-num">Capítulo I</span>
+    <h2>Era uma vez...</h2>
+    <p class="story-text">
+      ...uma princesinha chamada Danielle, com lábios vermelhos como a maçã, sorriso doce como o conto
+      e um coração puro como a neve. Ela está prestes a completar seu primeiro aninho de vida e nada
+      seria mais mágico do que celebrar essa data ao lado das pessoas que ama. Os anõezinhos já estão
+      arrumando a floresta, o castelo está enfeitado e falta apenas você para essa história ficar completa.
+    </p>
+    <div class="icon-row">
+      <span>🍎</span><span>🌳</span><span>🦋</span><span>🎀</span><span>🐰</span>
+    </div>
+  </div>
+  <svg class="divider" viewBox="0 0 1440 100" preserveAspectRatio="none"><path d="M0,50 C240,10 480,95 720,55 C960,15 1200,80 1440,40 L1440,100 L0,100 Z" fill="#dceeff"/></svg>
+</section>
+
+<!-- ================= CHAPTER II — DETAILS ================= -->
+<section id="ch2">
+  <div class="wrap reveal">
+    <span class="chapter-num">Capítulo II</span>
+    <h2>Quando & Onde</h2>
+    <p class="sub">"Espelho, espelho meu... onde é a festa mais fofa de todas?"</p>
+    <div class="cards">
+      <div class="card">
+        <div class="ic">📅</div>
+        <h3>Data</h3>
+        <p>23 de agosto de 2026</p>
+        <small>Domingo</small>
+      </div>
+      <div class="card">
+        <div class="ic">🕐</div>
+        <h3>Horário</h3>
+        <p>A partir das 13h</p>
+        <small>Chegue e viva o conto</small>
+      </div>
+      <div class="card">
+        <div class="ic">🏰</div>
+        <h3>Local</h3>
+        <p>Rua Simão Ragusa, 606</p>
+        <small>Jardim Maggi, São Paulo - SP · 02982-140</small>
+        <a class="map-btn" href="https://www.google.com/maps/search/?api=1&query=Rua+Sim%C3%A3o+Ragusa%2C+606+-+Jardim+Maggi%2C+S%C3%A3o+Paulo+-+SP%2C+02982-140" target="_blank" rel="noopener">Ver no mapa →</a>
+      </div>
+    </div>
+    <div style="text-align:center;">
+      <a class="cal-btn" href="https://www.google.com/calendar/render?action=TEMPLATE&text=Anivers%C3%A1rio+de+1+aninho+da+Danielle+%F0%9F%91%91&dates=20260823T160000Z/20260823T200000Z&details=Venha+celebrar+o+primeiro+aninho+da+Danielle+%E2%80%93+tema+Baby+Branca+de+Neve!&location=Rua+Sim%C3%A3o+Ragusa%2C+606+-+Jardim+Maggi%2C+S%C3%A3o+Paulo+-+SP" target="_blank" rel="noopener">📌 Adicionar ao calendário</a>
+    </div>
+  </div>
+  <svg class="divider" viewBox="0 0 1440 100" preserveAspectRatio="none"><path d="M0,45 C240,95 480,5 720,35 C960,65 1200,15 1440,50 L1440,100 L0,100 Z" fill="#efe3fb"/></svg>
+</section>
+
+<!-- ================= CHAPTER III — COUNTDOWN ================= -->
+<section id="ch3">
+  <div class="wrap reveal">
+    <span class="chapter-num">Capítulo III</span>
+    <h2>A magia está contando os dias</h2>
+    <p class="sub">Faltam apenas...</p>
+    <div class="countdown" id="countdown">
+      <div class="cd-box"><div class="num" id="cd-days">00</div><div class="lbl">dias</div></div>
+      <div class="cd-box"><div class="num" id="cd-hours">00</div><div class="lbl">horas</div></div>
+      <div class="cd-box"><div class="num" id="cd-mins">00</div><div class="lbl">min</div></div>
+      <div class="cd-box"><div class="num" id="cd-secs">00</div><div class="lbl">seg</div></div>
+    </div>
+    <div class="apple-deco">🍎✨🍎</div>
+  </div>
+  <svg class="divider" viewBox="0 0 1440 100" preserveAspectRatio="none"><path d="M0,55 C240,15 480,90 720,50 C960,10 1200,85 1440,45 L1440,100 L0,100 Z" fill="#ffd7de"/></svg>
+</section>
+
+<!-- ================= CHAPTER IV — RSVP ================= -->
+<section id="ch4">
+  <div class="wrap reveal">
+    <span class="chapter-num">Capítulo IV</span>
+    <h2>Confirme sua presença</h2>
+    <p class="sub">Toda boa história de fadas precisa de convidados especiais. Confirme até <strong>16 de agosto de 2026</strong> para garantirmos seu lugar neste conto encantado.</p>
+    <div class="rsvp-actions">
+      <a class="rsvp-btn primary" href="https://wa.me/5511979719797?text=Ol%C3%A1!%20Confirmo%20presen%C3%A7a%20na%20festa%20da%20Danielle%20%F0%9F%91%91%F0%9F%8D%8E" target="_blank" rel="noopener">Eu vou! 👑</a>
+      <a class="rsvp-btn ghost" href="https://wa.me/5511979719797?text=Ol%C3%A1!%20Infelizmente%20n%C3%A3o%20poderei%20ir%20%C3%A0%20festa%20da%20Danielle." target="_blank" rel="noopener">Não poderei ir</a>
+    </div>
+    <p class="rsvp-note">* substitua o número de WhatsApp no link pelo contato correto antes de enviar o convite</p>
+  </div>
+  <svg class="divider" viewBox="0 0 1440 100" preserveAspectRatio="none"><path d="M0,40 C240,90 480,0 720,30 C960,60 1200,90 1440,40 L1440,100 L0,100 Z" fill="#fff1c2"/></svg>
+</section>
+
+<!-- ================= CHAPTER V — DRESS CODE ================= -->
+<section id="ch5">
+  <div class="wrap reveal">
+    <span class="chapter-num">Capítulo V</span>
+    <h2>Um toque de conto de fadas</h2>
+    <div class="palette-row">
+      <span class="swatch" style="background:var(--blush-deep)"></span>
+      <span class="swatch" style="background:var(--sky-deep)"></span>
+      <span class="swatch" style="background:var(--butter-deep)"></span>
+      <span class="swatch" style="background:var(--sage)"></span>
+    </div>
+    <p class="msg">
+      Se quiser entrar ainda mais no clima do conto, vista as cores da Branca de Neve — vermelho, azul e amarelo,
+      em tons bem suavinhos. E lembre-se: o presente mais precioso desse dia é a sua presença celebrando ao lado
+      da nossa princesinha. 🍎
+    </p>
+  </div>
+  <svg class="divider" viewBox="0 0 1440 100" preserveAspectRatio="none"><path d="M0,50 C240,5 480,95 720,45 C960,-5 1200,80 1440,35 L1440,100 L0,100 Z" fill="#4f9a6c"/></svg>
+</section>
+
+<!-- ================= FOOTER ================= -->
+<footer>
+  <span class="script">Danielle</span>
+  <p>"E foram felizes para sempre" — e essa história de amor começa com você ao nosso lado neste dia tão especial.</p>
+  <p class="hosts">Com carinho, Isabelle &amp; Arlan</p>
+  <div class="fin">🍎 👑 🌳</div>
+</footer>
+
+<script>
+  // ---- falling petals/apples ----
+  const petalLayer = document.getElementById('petals');
+  const symbols = ['🌸','🍎','✨','🎀'];
+  const count = window.innerWidth < 600 ? 12 : 20;
+  for(let i=0;i<count;i++){
+    const el = document.createElement('span');
+    el.className='petal';
+    el.textContent = symbols[Math.floor(Math.random()*symbols.length)];
+    const left = Math.random()*100;
+    const size = 12 + Math.random()*14;
+    const duration = 10 + Math.random()*14;
+    const delay = Math.random()*-20;
+    const drift = (Math.random()*140-70)+'px';
+    el.style.left = left+'vw';
+    el.style.fontSize = size+'px';
+    el.style.setProperty('--drift', drift);
+    el.style.animationDuration = duration+'s';
+    el.style.animationDelay = delay+'s';
+    petalLayer.appendChild(el);
+  }
+
+  // ---- reveal on scroll ----
+  const reveals = document.querySelectorAll('.reveal');
+  const io = new IntersectionObserver((entries)=>{
+    entries.forEach(entry=>{
+      if(entry.isIntersecting){ entry.target.classList.add('in'); }
+    });
+  },{threshold:.2});
+  reveals.forEach(r=>io.observe(r));
+
+  // ---- countdown ----
+  const target = new Date('2026-08-23T13:00:00-03:00').getTime();
+  function tick(){
+    const now = Date.now();
+    let diff = target - now;
+    if(diff < 0) diff = 0;
+    const d = Math.floor(diff/(1000*60*60*24));
+    const h = Math.floor((diff/(1000*60*60))%24);
+    const m = Math.floor((diff/(1000*60))%60);
+    const s = Math.floor((diff/1000)%60);
+    document.getElementById('cd-days').textContent = String(d).padStart(2,'0');
+    document.getElementById('cd-hours').textContent = String(h).padStart(2,'0');
+    document.getElementById('cd-mins').textContent = String(m).padStart(2,'0');
+    document.getElementById('cd-secs').textContent = String(s).padStart(2,'0');
+  }
+  tick();
+  setInterval(tick,1000);
+</script>
+</body>
+</html>
